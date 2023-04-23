@@ -24,7 +24,7 @@ Our website includes the following features:
 
 ## Getting Started
 
-To get started with our website, you can visit the deployed version on Vercel [here](https://example.com). Alternatively, you can clone the repository and run the following commands:
+To get started with our website, you can visit the deployed version on Vercel [here](https://hossein-airbnb.vercel.app). Alternatively, you can clone the repository and run the following commands:
 
 ```
 npm install

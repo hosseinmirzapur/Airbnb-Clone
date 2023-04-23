@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Airbnb Clone Website
+
+Welcome to our Airbnb Clone website, created with Next.js version 13. Our website is designed to provide a seamless experience for users who are looking for a place to stay during their travels. With our website, users can easily search for their desired destination, view available accommodations, and make reservations.
+
+## Technologies Used
+
+Our website is built using the following technologies:
+
+- **Next.js version 13:** Next.js is a popular React framework that allows for server-side rendering and provides many features out of the box.
+- **Tailwind.css:** Tailwind.css is a utility-first CSS framework that allows for quick and easy styling.
+- **Prisma:** Prisma is an ORM for databases, which provides an easy-to-use API for working with databases.
+- **Typescript:** Typescript is a superset of JavaScript that adds static type checking and other features to the language.
+- **MongoDB:** MongoDB is a NoSQL database that provides flexibility and scalability for our website.
+- **Vercel:** Vercel is a cloud platform for deploying and hosting web applications.
+
+## Features
+
+Our website includes the following features:
+
+- **Search functionality:** Users can search for accommodations by destination, dates, and number of guests.
+- **Accommodation listings:** Users can view available accommodations with details such as price, number of rooms, and amenities.
+- **Reservation system:** Users can make reservations for accommodations, with the ability to select dates and number of guests.
+- **User authentication:** Users can create an account, log in, and view their reservations.
 
 ## Getting Started
 
-First, run the development server:
+To get started with our website, you can visit the deployed version on Vercel [here](https://example.com). Alternatively, you can clone the repository and run the following commands:
 
-```bash
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will install the necessary dependencies and start the development server. You will also need to set up a MongoDB database and provide the necessary credentials in a `.env` file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+We welcome contributions to our website! To contribute, please fork the repository and submit a pull request. Be sure to follow our [code of conduct](CODE_OF_CONDUCT.md) and [contribution guidelines](CONTRIBUTING.md).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Our website is licensed under the [MIT License](LICENSE).

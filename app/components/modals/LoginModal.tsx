@@ -85,13 +85,21 @@ const LoginModal = () => {
 				label="Continue with Google"
 				outline
 				icon={FcGoogle}
-				onClick={() => {}}
+				onClick={async () => {
+					setIsLoading(true)
+					await signIn("google")
+				}}
+				disabled={isLoading}
 			/>
 			<Button
 				label="Continue with Github"
 				icon={AiFillGithub}
 				outline
-				onClick={() => {}}
+				onClick={async () => {
+					setIsLoading(true)
+					await signIn("github")
+				}}
+				disabled={isLoading}
 			/>
 			<div className="text-neutral-500 text-center mt-4 font-light">
 				<div className="flex flex-row justify-center items-center gap-2">

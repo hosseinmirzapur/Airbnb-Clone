@@ -17,7 +17,12 @@ export const getCurrentUser = async () => {
 			},
 		})
 		if (!user) return null
-		return user
+		return {
+			...user,
+			createdAt: user.createdAt.toISOString(),
+			updatedAt: user.updatedAt.toISOString(),
+			emailVerified: user.emailVerified?.toISOString || null,
+		}
 	} catch (error: any) {
 		return null
 	}

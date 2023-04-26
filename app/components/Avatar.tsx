@@ -1,11 +1,16 @@
 "use client"
 
 import Image from "next/image"
+import { SafeUser } from "../types"
 
-const Avatar = () => {
+interface AvatarProps {
+	currentUser?: SafeUser | null
+}
+
+const Avatar: React.FC<AvatarProps> = ({ currentUser }) => {
 	return (
 		<Image
-			src="/images/placeholder.jpg"
+			src={currentUser?.image ? currentUser.image : "/images/placeholder.jpg"}
 			alt="avatar"
 			width={30}
 			height={30}

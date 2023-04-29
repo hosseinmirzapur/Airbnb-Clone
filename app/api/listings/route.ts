@@ -46,3 +46,8 @@ export const POST = async (request: Request) => {
 
 	return NextResponse.json(listing)
 }
+
+export const GET = async () => {
+	const listings = prisma.listing.findMany()
+	return NextResponse.json(listings)
+}

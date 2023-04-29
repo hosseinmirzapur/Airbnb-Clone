@@ -1,12 +1,12 @@
-import { Listing } from "@prisma/client"
 import Container from "./components/Container"
 import EmptyListing from "./components/EmptyListing"
 import { getListings } from "./actions/getListings"
 import ListingCard from "./components/listings/ListingCard"
 import { getCurrentUser } from "./actions/getCurrentUser"
+import { SafeListing } from "./types"
 
 export default async function Home() {
-	const listings: Listing[] = await getListings()
+	const listings: SafeListing[] = await getListings()
 
 	const currentUser = await getCurrentUser()
 

@@ -66,7 +66,7 @@ const ListingClient: React.FC<ListingClientIProps> = ({
 		}
 		setIsLoading(true)
 		try {
-			await axios.post("/api/reservation", {
+			await axios.post("/api/reservations", {
 				totalPrice,
 				startDate: dateRange.startDate,
 				endDate: dateRange.endDate,
@@ -74,7 +74,7 @@ const ListingClient: React.FC<ListingClientIProps> = ({
 			})
 			toast.success("Listing Reserverd!")
 			setDateRange(initialDateRange)
-			router.refresh()
+			router.push("/trips")
 		} catch (error) {
 			toast.error("Something went wrong!")
 		} finally {

@@ -1,12 +1,16 @@
 import Container from "./components/Container"
 import EmptyListing from "./components/EmptyListing"
-import { getListings } from "./actions/getListings"
+import { IListingsParams, getListings } from "./actions/getListings"
 import ListingCard from "./components/listings/ListingCard"
 import { getCurrentUser } from "./actions/getCurrentUser"
 import { SafeListing } from "./types"
 
-export default async function Home() {
-	const listings: SafeListing[] = await getListings()
+interface HomeProps {
+	searchParams: IListingsParams
+}
+
+const Home = async ({ searchParams }: HomeProps) => {
+	const listings: SafeListing[] = await getListings(searchParams)
 
 	const currentUser = await getCurrentUser()
 
@@ -37,3 +41,5 @@ export default async function Home() {
 		</Container>
 	)
 }
+
+export default Home

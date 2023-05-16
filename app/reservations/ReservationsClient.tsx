@@ -23,21 +23,24 @@ const ReservationsClient: React.FC<ComponentProps> = ({
 	const [deletingId, setDeletingId] = useState("")
 
 	// ** Functions
-	const onCancel = useCallback(async (id: string) => {
-		setDeletingId(id)
-		await axios
-			.delete(`/api/reservations/${id}`)
-			.then(() => {
-				toast.success("Reservation canceled")
-				router.refresh()
-			})
-			.catch(() => {
-				toast.error("Failed to cancel reservation")
-			})
-			.finally(() => {
-				setDeletingId("")
-			})
-	}, [])
+	const onCancel = useCallback(
+		async (id: string) => {
+			setDeletingId(id)
+			await axios
+				.delete(`/api/reservations/${id}`)
+				.then(() => {
+					toast.success("Reservation canceled")
+					router.refresh()
+				})
+				.catch(() => {
+					toast.error("Failed to cancel reservation")
+				})
+				.finally(() => {
+					setDeletingId("")
+				})
+		},
+		[router],
+	)
 
 	return (
 		<Container>

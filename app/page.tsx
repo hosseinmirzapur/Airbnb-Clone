@@ -5,11 +5,7 @@ import ListingCard from "./components/listings/ListingCard"
 import { getCurrentUser } from "./actions/getCurrentUser"
 import { SafeListing } from "./types"
 
-interface HomeProps {
-	searchParams: IListingsParams
-}
-
-const Home = async ({ searchParams }: HomeProps) => {
+const Home = async ({ searchParams }: { searchParams: IListingsParams }) => {
 	const listings: SafeListing[] = await getListings(searchParams)
 
 	const currentUser = await getCurrentUser()

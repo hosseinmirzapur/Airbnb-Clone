@@ -15,6 +15,22 @@ export interface IListingsParams {
 
 export const getListings = async (params: IListingsParams) => {
 	try {
+		if (!params) {
+			const listings: Listing[] = await prisma.listing.findMany({
+				orderBy: {
+					createdAt: "desc",
+				},
+			})
+
+			const safeListings = listings.map((listing) => {
+				return {
+					...listing,
+					createdAt: listing.createdAt.toISOString(),
+				}
+			})
+			return safeListings
+		}
+
 		const {
 			userId,
 			bathroomCount,
